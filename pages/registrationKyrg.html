@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>registrationKyrg</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Легкая Математика</a>
+
+        <nav class="navbar">
+            <form method="post" action="/openRegister" style="text-align: left">
+                <button class="btn">Орус тилине отуу</button>
+            </form>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box form-box">
+            <div class="login-title">Регистрация</div>
+            <form method="post" action="/registerKyrg" style="text-align: left">
+                <div class="field input">
+                    <label for="username">Атыныз</label>
+                    <input type="text" id="username" name="username" autocomplete="off" required>
+                </div>
+                <div class="field input">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" autocomplete="off" required>
+                </div>
+                <div class="field input">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" autocomplete="off" required>
+                </div>
+
+                <button type="submit" class="btn">Регистрация</button>
+
+                <div class="links">
+                    Аккаунтунуз барбы? <a href="login.html"> Кируу </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

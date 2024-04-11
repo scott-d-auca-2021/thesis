@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>registration</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Легкая Математика</a>
+    </header>
+
+    <div class="level01">
+        <h1>Уровень 1</h1>
+        <div class="game">
+            <h2 id="question"> question goes here</h2>
+            <h2 id="test"> test goes here</h2>
+            <div id="answerButtons">
+                <button class="gameBtn">Answer 1</button>
+                <button class="gameBtn">Answer 2</button>
+                <button class="gameBtn">Answer 3</button>
+                <button class="gameBtn">Answer 4</button>
+            </div>
+            <button id="nextBtn">Дальше</button>
+        </div>
+    </div>
+    <form method="post" action="/levels" style="text-align: left">
+        <button id="endBtn" class="endBtn">Закончить</button>
+    </form>
+    
+    <script src="questions1.js"></script>
+    <script src="level01.js"></script>
+
+</body>
+
+</html>
