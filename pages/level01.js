@@ -4,7 +4,7 @@ const answerButtons = document.getElementById("answerButtons");
 const nextButton = document.getElementById("nextBtn");
 
 
-const userEmail = '<%=emailToPass%>';
+const userEmail = '<%=email%>';
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -87,8 +87,13 @@ nextButton.addEventListener("click", () => {
 });
 
 function updateLevelOneA() {
+    const sessionID = document.cookie.split('=')[1]; // Assuming session ID is stored as a cookie
     fetch("/updateLevelOneA", {
-        method: "post"
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+            "Session-ID": sessionID
+        }
     })
     .then(response => {
         if (!response.ok) {
@@ -102,8 +107,13 @@ function updateLevelOneA() {
 }
 
 function updateLevelOneB() {
+    const sessionID = document.cookie.split('=')[1]; // Assuming session ID is stored as a cookie
     fetch("/updateLevelOneB", {
-        method: "post"
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+            "Session-ID": sessionID
+        }
     })
     .then(response => {
         if (!response.ok) {
@@ -115,6 +125,7 @@ function updateLevelOneB() {
         console.error("Error updating level1 data:", error);
     });
 }
+
 
 
 startQuiz();

@@ -7,6 +7,8 @@ const fs = require("fs");
 const path = require("path");
 const url = require("url");
 const cors = require("cors");
+const session = require("express-session");
+
 
 
 const app = express();
@@ -36,13 +38,13 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/pages"));
 app.use(express.static(__dirname));
 
-const session = require("express-session");
 
 // Configure session middleware
 app.use(session({
-    secret: "your-secret-key",
-    resave: false,
-    saveUninitialized: true
+    secret: 'your-secret-key',
+    cookie: {maxAge: 300000},
+    resave:false,
+    saveUninitialized: false
 }));
 
 
@@ -52,8 +54,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-let currentUser;
 
 
 // Main page Russian       ##############################################################################
@@ -172,7 +172,7 @@ app.post("/register", async (req, res) => {
             });
             await userData.save();
             const emailToPass = userData.email;
-            currentUser = userData;
+            req.session.user = userData;
             req.session.email = emailToPass;
             res.redirect("/levels");
         } else {
@@ -193,22 +193,29 @@ app.post("/loginAction", async (req, res) => {
 
         const existingUser = await User.findOne({ email: email });
 
-        if (existingUser) {
-            if (password === existingUser.password) {
-                currentUser = existingUser;
-                const emailToPass = currentUser.email;
-                req.session.email = emailToPass;
-                res.redirect("/levels");
-
-
+        if (req.session.authenticated)
+        {
+            res.json(req.session);
+        }
+        else{
+            if (existingUser) {
+                if (password === existingUser.password) {
+                    req.session.authenticated = true;
+                    req.session.user = existingUser;
+                    //res.json(req.session);
+                    res.redirect("/levels");
+    
+    
+                } else {
+                    // Redirect to loginError page if password is incorrect
+                    res.redirect("/loginError");
+                }
             } else {
-                // Redirect to loginError page if password is incorrect
+                // Redirect to loginError page if user doesn't exist
                 res.redirect("/loginError");
             }
-        } else {
-            // Redirect to loginError page if user doesn't exist
-            res.redirect("/loginError");
         }
+        
     }
     catch (error){
         console.log(error);
@@ -240,16 +247,20 @@ app.get("/error", (req, res) => {
 
 app.post("/updateLevelOneA", async (req, res) => {
     try {
-        let levelOne = currentUser.level1;
+
+        const sessionID = req.headers["session-id"]
+
+        const curUser = await User.findById(req.session.user);
+        let levelOne = curUser.level1;
         levelOne+='a';
+
 
         // Find the user by email and update the level1 property
         const user = await User.findOneAndUpdate(
-            { email: currentUser.email },
+            {email: curUser.email},
             { $set: { level1: levelOne} },
             { new: true } // Return the updated document
         );
-        currentUser = user;
 
         // Check if the user exists
         if (!user) {
@@ -267,16 +278,19 @@ app.post("/updateLevelOneA", async (req, res) => {
 
 app.post("/updateLevelOneB", async (req, res) => {
     try {
-        let levelOne = currentUser.level1;
-        levelOne += 'b';
+        const sessionID = req.headers["session-id"]
+
+        const curUser = await User.findById(req.session.user);
+        let levelOne = curUser.level1;
+        levelOne+='b';
+
 
         // Find the user by email and update the level1 property
         const user = await User.findOneAndUpdate(
-            { email: currentUser.email },
+            {email: curUser.email},
             { $set: { level1: levelOne} },
             { new: true } // Return the updated document
-        );
-        currentUser = user;
+        );;
 
         // Check if the user exists
         if (!user) {
