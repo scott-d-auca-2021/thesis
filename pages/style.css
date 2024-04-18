@@ -66,13 +66,59 @@ body {
 }
 
 
+/* Welcome Section Styles */
+.welcome-container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 15px 40px;
+    background-color: rgb(210, 233, 253);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.welcome-title {
+    color: #333; /* Dark gray color for the title */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.welcome-message {
+    color: #666; /* Medium gray color for the message */
+    font-size: 16px;
+    line-height: 1.6; /* Spacing for line height */
+}
+
+.notification {
+    color: #fff; /* White text */
+    background-color: #f44336; /* Red background */
+    padding: 10px;
+    margin-bottom: 15px; /* Space between the notification and the login title */
+    border-radius: 4px; /* Optional: Rounds the corners of the notification box */
+    text-align: center;
+    display: none; /* Hide the notification by default */
+}
+
+/* Show the notification if it contains content */
+.box.form-box .notification:empty {
+    display: none;
+}
+
+.box.form-box .notification:not(:empty) {
+    display: block;
+}
+
+
+
+
 /*REGISTRATION_PAGE*/  
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 90vh;
-    margin-top: -10vh;
+    margin-top: -20vh;
 }
 
 .box {

@@ -8,6 +8,8 @@ const path = require("path");
 const url = require("url");
 const cors = require("cors");
 const session = require("express-session");
+const bcrypt = require('bcrypt');
+const saltRounds = 10; // Уровень сложности хеширования
 
 
 
@@ -42,7 +44,11 @@ app.use(express.static(__dirname));
 // Configure session middleware
 app.use(session({
     secret: 'your-secret-key',
-    cookie: {maxAge: 300000},
+    cookie: {
+        maxAge: 30000,
+        //httpOnly: true,
+        secure: true
+    },
     resave:false,
     saveUninitialized: false
 }));
@@ -59,7 +65,7 @@ app.use(cors(corsOptions));
 // Main page Russian       ##############################################################################
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/pages/index.html");
+    res.sendFile(__dirname + "/pages/indexLogin.html");
     console.log("we are on the home page");
 });
 app.post("/openRegister", async (req, res) => {
@@ -153,76 +159,75 @@ app.get("/index", (req, res) => {
 
 
 
-app.post("/register", async (req, res) => {
-    try{
-        const {name, email, password} = req.body;
-        
-        const emptyString = '';
+app.post('/register', async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
 
-        const existingUser = await User.findOne({email: email});
+        // Хешируем пароль
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-        if (!existingUser)
-        {
-            let userData = new User({
-                name: name,
-                email: email,
-                password: password,
-                level1: emptyString,
-                level2: emptyString
+        // Проверяем, есть ли уже пользователь с таким email
+        const existingUser = await User.findOne({ email });
+
+        if (!existingUser) {
+            // Создаем нового пользователя с хешированным паролем
+            const userData = new User({
+                name,
+                email,
+                password: hashedPassword, // Сохраняем хешированный пароль
+                // остальные поля...
             });
+
             await userData.save();
-            const emailToPass = userData.email;
+
+            // Создаем сессию для пользователя
             req.session.user = userData;
-            req.session.email = emailToPass;
-            res.redirect("/levels");
+            res.redirect('/levels');
         } else {
-            res.redirect("/registrationError");
+            res.redirect('/registrationError');
         }
+    } catch (error) {
+        console.error(error);
+        res.redirect('/error');
     }
-    catch (error){
-        console.log(error);
-        res.redirect("/error");
-    }
-})
+});
+
 
 app.post("/loginAction", async (req, res) => {
-    console.log("we are in loginAction");
-    try{
+    try {
         const { email, password } = req.body;
-        const emailToPass = req.body.email;
 
-        const existingUser = await User.findOne({ email: email });
+        const user = await User.findOne({ email });
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-        if (req.session.authenticated)
-        {
-            res.json(req.session);
-        }
-        else{
-            if (existingUser) {
-                if (password === existingUser.password) {
-                    req.session.authenticated = true;
-                    req.session.user = existingUser;
-                    //res.json(req.session);
-                    res.redirect("/levels");
-    
-    
-                } else {
-                    // Redirect to loginError page if password is incorrect
-                    res.redirect("/loginError");
+        if (user && hashedPassword === user.password) { // You should be hashing your passwords
+            // Regenerate session when signing in to prevent fixation
+            req.session.regenerate((err) => {
+                if (err) {
+                    res.redirect("/indexLoginError");
                 }
-            } else {
-                // Redirect to loginError page if user doesn't exist
-                res.redirect("/loginError");
-            }
-        }
-        
-    }
-    catch (error){
-        console.log(error);
-        res.redirect("/error");
-    }
 
+                // Store user info in session, typically a user ID
+                req.session.userId = user._id;
+                req.session.authenticated = true;
+
+                // Redirect to user's main page
+                res.redirect("/levels");
+            });
+        } else {
+            // Handle login failure
+            res.redirect("/indexLoginError");
+        }
+    } catch (error) {
+        console.log(error);
+        res.redirect("/indexLoginError");
+    }
 });
+
+app.get("/indexLoginError", (req, res) => {
+    res.sendFile(__dirname + "/pages/indexLoginError.html");
+});
+
 
 
 app.get("/levels", (req, res) => {
