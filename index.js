@@ -8,7 +8,7 @@ const path = require("path");
 const url = require("url");
 const cors = require("cors");
 const session = require("express-session");
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const saltRounds = 10; // Уровень сложности хеширования
 
 
