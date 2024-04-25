@@ -16,29 +16,39 @@
         <a href="index.html" class="logo">Легкая Математика</a>
 
         <nav class="navbar">
-            <form method="post" action="/openKyrg" style="text-align: left">
+            <form method="post" action="/openLevels" style="text-align: left">
                 <button class="btn">Вернуться к уровням</button>
             </form>
         </nav>
     </header>
 
-    <div class="level01">
-        <h1>Уровень 1</h1>
-        <div class="game">
-            <h2 id="question"> question goes here</h2>
-            <h2 id="test"> test goes here</h2>
-            <div id="answerButtons">
-                <button class="gameBtn">Answer 1</button>
-                <button class="gameBtn">Answer 2</button>
-                <button class="gameBtn">Answer 3</button>
-                <button class="gameBtn">Answer 4</button>
+    <div class="all-level">
+        <div class="level01">
+            <h1>Уровень 1</h1>
+            <div class="game">
+                <h2 id="question"> question goes here</h2>
+                
+                <div id="answerButtons">
+                    <button class="gameBtn">Answer 1</button>
+                    <button class="gameBtn">Answer 2</button>
+                    <button class="gameBtn">Answer 3</button>
+                    <button class="gameBtn">Answer 4</button>
+                </div>
             </div>
-            <button id="nextBtn">Дальше</button>
         </div>
+
+        <div class="world">
+            <img src="ground1.png" class="ground">
+            <img src="ground1.png" class="ground">
+            <img src="hero.png" class="hero">
+            <img src="zombie.png" class="zombie" style="left: 85%;">
+        </div>
+        <button id="nextBtn">Дальше</button>
     </div>
-    <form method="post" action="/levels" style="text-align: left">
+    
+    <!-- <form method="post" action="/levels" style="text-align: left">
         <button id="endBtn" class="endBtn">Закончить</button>
-    </form>
+    </form> -->
     
     <script src="questions1.js"></script>
     <script src="level01.js"></script>

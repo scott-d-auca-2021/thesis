@@ -45,9 +45,10 @@ app.use(express.static(__dirname));
 app.use(session({
     secret: 'your-secret-key',
     cookie: {
-        maxAge: 30000,
-        //httpOnly: true,
+        maxAge: 3000000,
+        httpOnly: true,
         secure: true
+
     },
     resave:false,
     saveUninitialized: false
@@ -56,7 +57,7 @@ app.use(session({
 
 const corsOptions = {
     origin: "http://localhost:3000",
-    // Add other CORS options as needed
+    credentials: true  // This allows cookies to be sent with the request
 };
 
 app.use(cors(corsOptions));
@@ -162,6 +163,7 @@ app.get("/index", (req, res) => {
 app.post('/register', async (req, res) => {
     try {
         const { name, email, password } = req.body;
+        const emptyString = "";
 
         // Хешируем пароль
         const hashedPassword = await bcrypt.hash(password, saltRounds);
@@ -175,6 +177,8 @@ app.post('/register', async (req, res) => {
                 name,
                 email,
                 password: hashedPassword, // Сохраняем хешированный пароль
+                level1: emptyString,
+                level2: emptyString
                 // остальные поля...
             });
 
@@ -196,26 +200,23 @@ app.post('/register', async (req, res) => {
 app.post("/loginAction", async (req, res) => {
     try {
         const { email, password } = req.body;
-
         const user = await User.findOne({ email });
-        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-        if (user && hashedPassword === user.password) { // You should be hashing your passwords
-            // Regenerate session when signing in to prevent fixation
+        // We compare the hashed passwords here, not re-hash the input password
+        if (user && await bcrypt.compare(password, user.password)) {
+            // Passwords match, so proceed with login
             req.session.regenerate((err) => {
                 if (err) {
                     res.redirect("/indexLoginError");
+                    return;
                 }
 
                 // Store user info in session, typically a user ID
-                req.session.userId = user._id;
                 req.session.authenticated = true;
-
-                // Redirect to user's main page
+                req.session.user = user;
                 res.redirect("/levels");
             });
         } else {
-            // Handle login failure
             res.redirect("/indexLoginError");
         }
     } catch (error) {
@@ -224,18 +225,31 @@ app.post("/loginAction", async (req, res) => {
     }
 });
 
+
 app.get("/indexLoginError", (req, res) => {
     res.sendFile(__dirname + "/pages/indexLoginError.html");
 });
 
+app.post("/openLevels", async(req, res) => {
+    try{
+        res.redirect("/levels");
+        
+    }
+    catch (error){
+        console.log(error);
+        res.redirect("/error");
+    }
 
+});
 
 app.get("/levels", (req, res) => {
     res.sendFile(__dirname + "/pages/levels.html");
 });
+
 app.post("/levelOne", async (req, res) => {
     try{
         res.redirect("/level01");
+        
     }
     catch (error){
         console.log(error);
@@ -252,10 +266,8 @@ app.get("/error", (req, res) => {
 
 app.post("/updateLevelOneA", async (req, res) => {
     try {
-
-        const sessionID = req.headers["session-id"]
-
         const curUser = await User.findById(req.session.user);
+        console.log("found ID");
         let levelOne = curUser.level1;
         levelOne+='a';
 
@@ -266,6 +278,8 @@ app.post("/updateLevelOneA", async (req, res) => {
             { $set: { level1: levelOne} },
             { new: true } // Return the updated document
         );
+
+        req.session.user = user;
 
         // Check if the user exists
         if (!user) {
@@ -283,9 +297,8 @@ app.post("/updateLevelOneA", async (req, res) => {
 
 app.post("/updateLevelOneB", async (req, res) => {
     try {
-        const sessionID = req.headers["session-id"]
-
         const curUser = await User.findById(req.session.user);
+        console.log("found ID");
         let levelOne = curUser.level1;
         levelOne+='b';
 
@@ -295,7 +308,9 @@ app.post("/updateLevelOneB", async (req, res) => {
             {email: curUser.email},
             { $set: { level1: levelOne} },
             { new: true } // Return the updated document
-        );;
+        );
+
+        req.session.user = user;
 
         // Check if the user exists
         if (!user) {

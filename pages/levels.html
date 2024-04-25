@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <title>registration</title>
+    <title>levels</title>
 </head>
 
 <body>
@@ -23,20 +23,102 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="levels-container">
         <div class="box form-box">
             <div class="login-title">Уровни</div>
-            <form method="post" action="/levelOne" style="text-align: left">
-                <button type="submit" class="btn">Уровень 1</button>
-            </form>
-            <form method="post" action="/levelTwo" style="text-align: left">
-                <button type="submit" class="btn">Уровень 2</button>
-            </form>
-            <form method="post" action="/levelThree" style="text-align: left">
-                <button type="submit" class="btn">Уровень 3</button>
-            </form>
+
+            <hr>
+
+            <div class="level-container">
+                <form method="post" action="/levelOne" style="text-align: left">
+                    <button type="submit" class="btn level-btn">Уровень 1</button>
+                    <button type="button" class="btn theory-btn" data-target="popup-1">Теория</button>
+                    <p class="level-description">Нахождение дискриминанта и корней в квадратных уравнениях</p>
+                </form>
+            </div>
+
+            <div class="level-container">
+                <form method="post" action="/levelOne" style="text-align: left">
+                    <button type="submit" class="btn level-btn">Уровень 2</button>
+                    <button type="button" class="btn theory-btn" data-target="popup-1">Теория</button>
+                    <p class="level-description">тема 2</p>
+                </form>
+            </div>
+
+            <div class="level-container">
+                <form method="post" action="/levelOne" style="text-align: left">
+                    <button type="submit" class="btn level-btn">Уровень 3</button>
+                    <button type="button" class="btn theory-btn" data-target="popup-1">Теория</button>
+                    <p class="level-description">тема 3</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Math Theory Popup (hidden initially) -->
+    <div class="math-theory-popup" id="popup-1">
+        <div class="math-theory-content">
+            <span class="close-theory">&times;</span>
+            <h2>Математическая теория</h2>
+            <!-- Your math theory content goes here -->
+            <p>Здесь будет содержаться математическая теория для уровня 1</p>
+            <div class="math-theory-scrollbox">
+                1111111111111111111111111111
+            </div>
+        </div>
+    </div>
+
+    <!-- Math Theory Popup (hidden initially) -->
+    <div class="math-theory-popup" id="popup-2">
+        <div class="math-theory-content">
+            <span class="close-theory">&times;</span>
+            <h2>Математическая теория</h2>
+            <!-- Your math theory content goes here -->
+            <p>Здесь будет содержаться математическая теория для уровня 2</p>
+            <div class="math-theory-scrollbox">
+                22222222222222222222222222222222222
+            </div>
+        </div>
+    </div>
+    <!-- Math Theory Popup (hidden initially) -->
+    <div class="math-theory-popup" id="popup-3">
+        <div class="math-theory-content">
+            <span class="close-theory">&times;</span>
+            <h2>Математическая теория</h2>
+            <!-- Your math theory content goes here -->
+            <p>Здесь будет содержаться математическая теория для уровня 3</p>
+            <div class="math-theory-scrollbox">
+                333333333333333333333333333333333333333
+            </div>
         </div>
     </div>
 </body>
+<script>
+    // JavaScript to handle opening/closing the math theory popup
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const theoryButtons = document.querySelectorAll('.theory-btn');
+        theoryButtons.forEach(btn => {
+            btn.onclick = function() {
+                const targetId = btn.getAttribute('data-target');
+                const popup = document.getElementById(targetId);
+                popup.style.display = 'block';
+            }
+        });
+
+        const closeButtons = document.querySelectorAll('.close-theory');
+        closeButtons.forEach(btn => {
+            btn.onclick = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            }
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('math-theory-popup')) {
+                event.target.style.display = 'none';
+            }
+        }
+    });
+
+</script>
 
 </html>

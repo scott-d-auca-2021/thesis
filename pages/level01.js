@@ -1,20 +1,33 @@
 const questionElement = document.getElementById("question");
-const testEmailElement = document.getElementById("test");
 const answerButtons = document.getElementById("answerButtons");
 const nextButton = document.getElementById("nextBtn");
+const endButton = document.getElementById("endBtn");
+
+let initialZombiePosition = 85;
+
+let zombiePosition = 85; // Initial position of the zombie (percent of the container width)
+const moveStep = 12 ; // Number of percentage points the zombie moves closer per incorrect answer
+
+let fail = false;
 
 
-const userEmail = '<%=email%>';
 
-let currentQuestionIndex = 0;
-let score = 0;
-let letterToAdd;
 function rand() {
     return Math.floor(Math.random() * questions.length);
 }
 
+let currentQuestionIndex = rand();
+let score = 0;
+let letterToAdd;
+
+
 function resetState() {
     nextButton.style.display = "none";
+    if (zombiePosition <9){
+        // zombiePosition = initialZombiePosition; // Reset the zombie's position.
+        // document.querySelector('.zombie').style.left = `${zombiePosition}%`; // Reset the zombie's style.
+    }
+    
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -31,7 +44,6 @@ function showQuestion() {
 
     questionElement.innerHTML = currentQuestion.question;
     MathJax.typeset([questionElement]);
-    testEmailElement.innerHTML = userEmail;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -48,6 +60,8 @@ function showQuestion() {
 
 function startQuiz() {
     score = 0;
+    zombiePosition = initialZombiePosition; // Reset the zombie's position.
+    document.querySelector('.zombie').style.left = `${zombiePosition}%`; // Reset the zombie's style.
     nextButton.innerHTML = "Next";
     showQuestion();
 }
@@ -64,6 +78,7 @@ function selectAnswer(e){
         selectedBtn.classList.add("incorrect");
         //here we do action when INcorrect answer is selected and we update user's level1 String appeding 'b' to it
         updateLevelOneB();
+        moveZombieCloser();
 
 
     }
@@ -76,15 +91,29 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
-function handleNextButton(){
-    currentQuestionIndex = rand();
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `Вы ответили на ${score} вопросов)`;
+    nextButton.innerHTML= "Играть заново";
+    //nextButton.style.display = "block";
+}
 
-    showQuestion();
+function handleNextButton(){
+    //if (zombiePosition >=9){
+        if (fail){
+            zombiePosition = initialZombiePosition; // Reset the zombie's position.
+            document.querySelector('.zombie').style.left = `${zombiePosition}%`; // Reset the zombie's style.
+            fail = false;
+        }
+        currentQuestionIndex = rand();
+        showQuestion();
+    //}
 }
 
 nextButton.addEventListener("click", () => {
     handleNextButton();
 });
+
 
 function updateLevelOneA() {
     const sessionID = document.cookie.split('=')[1]; // Assuming session ID is stored as a cookie
@@ -124,6 +153,18 @@ function updateLevelOneB() {
     .catch(error => {
         console.error("Error updating level1 data:", error);
     });
+}
+
+function moveZombieCloser() {
+    if (zombiePosition > 4) { // Ensures the zombie does not overlap the hero completely
+        zombiePosition -= moveStep;
+    }
+    document.querySelector('.zombie').style.left = `${zombiePosition}%`;
+    
+    if (zombiePosition <9){
+        fail = true;
+        showScore();
+    }
 }
 
 
