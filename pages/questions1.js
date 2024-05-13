@@ -263,8 +263,8 @@ const questions = [
         //27
         question: "Найдите дискриминант уравнения: \\(5x^2 - 10x + 2 = 0\\)",
         answers: [
-            {text: "60", correct: false},
-            {text: "80", correct: true},
+            {text: "60", correct: true},
+            {text: "80", correct: false},
             {text: "20", correct: false},
             {text: "0", correct: false},
         ]
@@ -283,8 +283,8 @@ const questions = [
         //29
         question: "Найдите дискриминант уравнения: \\(2x^2 - 6x + 3 = 0\\)",
         answers: [
-            {text: "12", correct: false},
-            {text: "0", correct: true},
+            {text: "0", correct: false},
+            {text: "12", correct: true},
             {text: "9", correct: false},
             {text: "3", correct: false},
         ]
@@ -294,7 +294,7 @@ const questions = [
         question: "Найдите дискриминант уравнения: \\(x^2 - 8x + 15 = 0\\)",
         answers: [
             {text: "16", correct: false},
-            {text: "64", correct: true},
+            {text: "4", correct: true},
             {text: "-16", correct: false},
             {text: "8", correct: false},
         ]
@@ -303,7 +303,7 @@ const questions = [
         //31
         question: "Найдите дискриминант уравнения: \\(3x^2 - 12x + 10 = 0\\)",
         answers: [
-            {text: "24", correct: false},
+            {text: "26", correct: false},
             {text: "24", correct: true},
             {text: "36", correct: false},
             {text: "-24", correct: false},
@@ -313,9 +313,9 @@ const questions = [
         //32
         question: "Найдите дискриминант уравнения: \\(4x^2 + 8x + 3 = 0\\)",
         answers: [
-            {text: "16", correct: false},
+            {text: "26", correct: false},
             {text: "-8", correct: false},
-            {text: "28", correct: true},
+            {text: "16", correct: true},
             {text: "4", correct: false},
         ]
     },
@@ -323,9 +323,9 @@ const questions = [
         //33
         question: "Найдите дискриминант уравнения: \\(x^2 - 10x + 25 = 0\\)",
         answers: [
-            {text: "0", correct: true},
+            {text: "25", correct: true},
             {text: "10", correct: false},
-            {text: "25", correct: false},
+            {text: "0", correct: true},
             {text: "-25", correct: false},
         ]
     },
@@ -333,9 +333,9 @@ const questions = [
         //34
         question: "Найдите дискриминант уравнения: \\(x^2 - 2x + 1 = 0\\)",
         answers: [
-            {text: "0", correct: true},
-            {text: "1", correct: false},
             {text: "2", correct: false},
+            {text: "1", correct: false},
+            {text: "0", correct: true},
             {text: "4", correct: false},
         ]
     },
@@ -343,9 +343,9 @@ const questions = [
         //35
         question: "Найдите дискриминант уравнения: \\(x^2 + 6x + 9 = 0\\)",
         answers: [
-            {text: "0", correct: true},
+            {text: "6", correct: false},
             {text: "3", correct: false},
-            {text: "9", correct: false},
+            {text: "0", correct: true},
             {text: "36", correct: false},
         ]
     },
@@ -353,9 +353,9 @@ const questions = [
         //36
         question: "Найдите дискриминант уравнения: \\(x^2 - 3x + 2 = 0\\)",
         answers: [
-            {text: "1", correct: true},
-            {text: "4", correct: false},
             {text: "-1", correct: false},
+            {text: "4", correct: false},
+            {text: "1", correct: true},
             {text: "0", correct: false},
         ]
     },
@@ -363,17 +363,17 @@ const questions = [
         //37
         question: "Найдите дискриминант уравнения: \\(x^2 - 4x + 4 = 0\\)",
         answers: [
-            {text: "0", correct: true},
-            {text: "16", correct: false},
             {text: "4", correct: false},
+            {text: "16", correct: false},
+            {text: "0", correct: true},
             {text: "8", correct: false},
         ]
     },
     {
         //38
-        question: "Найдите дискриминант уравнения: \\(x^2 + 2x + 1 = 0\\)",
+        question: "Найдите дискриминант уравнения: \\(x^2 + 4x + 1 = 0\\)",
         answers: [
-            {text: "0", correct: true},
+            {text: "12", correct: true},
             {text: "1", correct: false},
             {text: "4", correct: false},
             {text: "-4", correct: false},
@@ -426,17 +426,17 @@ const questions = [
             {text: "-1", correct: false},
             {text: "4", correct: false},
             {text: "2", correct: false},
-            {text: "0", correct: true},
+            {text: "-4", correct: true},
         ]
     },
     {
         //44
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 6x + 3 = 0\\)",
+        question: "Найдите дискриминант уравнения: \\(3x^2 - 7x + 3 = 0\\)",
         answers: [
-            {text: "0", correct: true},
+            {text: "0", correct: false},
             {text: "6", correct: false},
             {text: "9", correct: false},
-            {text: "3", correct: false},
+            {text: "13", correct: true},
         ]
     },
     {
@@ -481,10 +481,10 @@ const questions = [
     },
     {
         //49
-        question: "Найдите дискриминант уравнения: \\(x^2 - 10x + 25 = 0\\)",
+        question: "Найдите дискриминант уравнения: \\(2x^2 - 9x + 10 = 0\\)",
         answers: [
-            {text: "0", correct: true},
-            {text: "50", correct: false},
+            {text: "0", correct: false},
+            {text: "1", correct: true},
             {text: "-100", correct: false},
             {text: "25", correct: false},
         ]
@@ -501,20 +501,20 @@ const questions = [
     },
     {
         //51
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 4x + 2 = 0\\)",
+        question: "Найдите дискриминант уравнения: \\(2x^2 - 4x + 1 = 0\\)",
         answers: [
-            {text: "0", correct: true},
+            {text: "12", correct: false},
             {text: "4", correct: false},
-            {text: "8", correct: false},
+            {text: "8", correct: true},
             {text: "-4", correct: false},
         ]
     },
     {
         //52
-        question: "Найдите дискриминант уравнения: \\(x^2 + 2x + 1 = 0\\)",
+        question: "Найдите дискриминант уравнения: \\(x^2 + 2x - 1 = 0\\)",
         answers: [
-            {text: "8", correct: false},
-            {text: "0", correct: true},
+            {text: "0", correct: false},
+            {text: "8", correct: true},
             {text: "4", correct: false},
             {text: "-1", correct: false},
         ]
@@ -523,9 +523,9 @@ const questions = [
         //53
         question: "Найдите дискриминант уравнения: \\(x^2 - 6x + 8 = 0\\)",
         answers: [
-            {text: "4", correct: false},
+            {text: "14", correct: false},
             {text: "8", correct: false},
-            {text: "16", correct: true},
+            {text: "4", correct: true},
             {text: "0", correct: false},
         ]
     },
@@ -543,18 +543,18 @@ const questions = [
         //55
         question: "Найдите дискриминант уравнения: \\(2x^2 - 5x + 2 = 0\\)",
         answers: [
-            {text: "1", correct: true},
+            {text: "1", correct: false},
             {text: "4", correct: false},
-            {text: "0", correct: false},
+            {text: "9", correct: true},
             {text: "-1", correct: false},
         ]
     },
     {
         //56
-        question: "Найдите дискриминант уравнения: \\(4x^2 - 12x + 9 = 0\\)",
+        question: "Найдите дискриминант уравнения: \\(4x^2 - 10x + 3 = 0\\)",
         answers: [
             {text: "36", correct: false},
-            {text: "0", correct: true},
+            {text: "52", correct: true},
             {text: "-12", correct: false},
             {text: "12", correct: false},
         ]
@@ -563,8 +563,8 @@ const questions = [
         //57
         question: "Найдите дискриминант уравнения: \\(x^2 - 8x + 15 = 0\\)",
         answers: [
-            {text: "16", correct: true},
-            {text: "0", correct: false},
+            {text: "16", correct: false},
+            {text: "4", correct: true},
             {text: "15", correct: false},
             {text: "-15", correct: false},
         ]
@@ -573,9 +573,9 @@ const questions = [
         //58
         question: "Найдите дискриминант уравнения: \\(3x^2 - 9x + 6 = 0\\)",
         answers: [
-            {text: "9", correct: false},
+            {text: "0", correct: false},
             {text: "3", correct: false},
-            {text: "0", correct: true},
+            {text: "9", correct: true},
             {text: "-6", correct: false},
         ]
     },
@@ -593,8 +593,8 @@ const questions = [
         //60
         question: "Найдите дискриминант уравнения: \\(2x^2 + 6x = 0\\)",
         answers: [
-            {text: "36", correct: true},
             {text: "6", correct: false},
+            {text: "36", correct: true},
             {text: "0", correct: false},
             {text: "-36", correct: false},
         ]
@@ -603,9 +603,9 @@ const questions = [
         //61
         question: "Найдите дискриминант уравнения: \\(3x^2 - 9x = 0\\)",
         answers: [
-            {text: "81", correct: true},
+            {text: "18", correct: true},
             {text: "9", correct: false},
-            {text: "0", correct: false},
+            {text: "81", correct: true},
             {text: "-9", correct: false},
         ]
     },
@@ -613,18 +613,18 @@ const questions = [
         //62
         question: "Найдите дискриминант уравнения: \\(x^2 + 4x = 0\\)",
         answers: [
-            {text: "16", correct: true},
+            {text: "-16", correct: true},
             {text: "4", correct: false},
             {text: "0", correct: false},
-            {text: "-16", correct: false},
+            {text: "16", correct: true},
         ]
     },
     {
         //63
         question: "Найдите дискриминант уравнения: \\(5x^2 - 10x = 0\\)",
         answers: [
-            {text: "100", correct: true},
             {text: "10", correct: false},
+            {text: "100", correct: true},
             {text: "0", correct: false},
             {text: "-100", correct: false},
         ]
@@ -643,18 +643,18 @@ const questions = [
         //65
         question: "Найдите дискриминант уравнения: \\(6x^2 - 12x = 0\\)",
         answers: [
-            {text: "144", correct: true},
+            {text: "14", correct: false},
             {text: "12", correct: false},
             {text: "0", correct: false},
-            {text: "-144", correct: false},
+            {text: "144", correct: true},
         ]
     },
     {
         //66
         question: "Найдите дискриминант уравнения: \\(x^2 - 7x = 0\\)",
         answers: [
-            {text: "49", correct: true},
             {text: "7", correct: false},
+            {text: "49", correct: true},
             {text: "0", correct: false},
             {text: "-49", correct: false},
         ]
@@ -663,9 +663,9 @@ const questions = [
         //67
         question: "Найдите дискриминант уравнения: \\(2x^2 + 4x = 0\\)",
         answers: [
-            {text: "16", correct: true},
+            {text: "8", correct: false},
             {text: "4", correct: false},
-            {text: "0", correct: false},
+            {text: "16", correct: true},
             {text: "-16", correct: false},
         ]
     },
@@ -693,18 +693,18 @@ const questions = [
         //70
         question: "Найдите корни уравнения: \\(x^2 + 6x + 5 = 0\\), если дискриминант = 16",
         answers: [
-            {text: "(-1; -5)", correct: true},
+            {text: "(-1; -2)", correct: false},
             {text: "(1; -5)", correct: false},
             {text: "(6; 5)", correct: false},
-            {text: "(-5; -1)", correct: false},
+            {text: "(-5; -1)", correct: true},
         ]
     },
     {
         //71
         question: "Найдите корни уравнения: \\(x^2 + 3x - 10 = 0\\), если дискриминант = 49",
         answers: [
-            {text: "(2; -5)", correct: false},
-            {text: "(5; -2)", correct: true},
+            {text: "(2; -5)", correct: true},
+            {text: "(5; -2)", correct: false},
             {text: "(-3; 10)", correct: false},
             {text: "(-2; 5)", correct: false},
         ]
@@ -713,8 +713,8 @@ const questions = [
         //72
         question: "Найдите корни уравнения: \\(x^2 - 5x + 6 = 0\\), если дискриминант = 1",
         answers: [
-            {text: "(3; 2)", correct: true},
-            {text: "(2; 3)", correct: false},
+            {text: "(-3; -2)", correct: false},
+            {text: "(2; 3)", correct: true},
             {text: "(-5; 6)", correct: false},
             {text: "(5; -6)", correct: false},
         ]
@@ -723,9 +723,9 @@ const questions = [
         //73
         question: "Найдите корни уравнения: \\(x^2 - x - 6 = 0\\), если дискриминант = 25",
         answers: [
-            {text: "(3; -2)", correct: true},
+            {text: "(3; 0)", correct: true},
             {text: "(-3; 2)", correct: false},
-            {text: "(-2; 3)", correct: false},
+            {text: "(-2; 3)", correct: true},
             {text: "(2; -3)", correct: false},
         ]
     },
@@ -733,8 +733,8 @@ const questions = [
         //74
         question: "Найдите корни уравнения: \\(x^2 - 6x + 8 = 0\\), если дискриминант = 4",
         answers: [
-            {text: "(4; 2)", correct: true},
-            {text: "(2; 4)", correct: false},
+            {text: "(4; -2)", correct: false},
+            {text: "(2; 4)", correct: true},
             {text: "(6; 8)", correct: false},
             {text: "(-4; -2)", correct: false},
         ]
@@ -743,10 +743,10 @@ const questions = [
         //75
         question: "Найдите корни уравнения: \\(x^2 + 4x - 12 = 0\\), если дискриминант = 64",
         answers: [
-            {text: "(2; -6)", correct: false},
-            {text: "(-6; 2)", correct: false},
+            {text: "(2; -6)", correct: true},
+            {text: "(-6; -2)", correct: false},
             {text: "(6; -2)", correct: false},
-            {text: "(-2; 6)", correct: true},
+            {text: "(-2; 6)", correct: false},
         ]
     },
     {
@@ -773,7 +773,7 @@ const questions = [
         //78
         question: "Найдите корни уравнения: \\(x^2 - 8x + 12 = 0\\), если дискриминант = 16",
         answers: [
-            {text: "(6; 2)", correct: false},
+            {text: "(6; -2)", correct: false},
             {text: "(2; 6)", correct: true},
             {text: "(-6; -2)", correct: false},
             {text: "(8; -12)", correct: false},
