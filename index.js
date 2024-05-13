@@ -326,10 +326,10 @@ app.post("/openLevelsKyrg", async(req, res) => {
 
 });
 
-app.get("/levels", checkSession, (req, res) => {
+app.get("/levels", (req, res) => {
     res.sendFile(__dirname + "/pages/levels.html");
 });
-app.get("/levelsKyrg", checkSession, (req, res) => {
+app.get("/levelsKyrg", (req, res) => {
     res.sendFile(__dirname + "/pages/levelsKyrg.html");
 });
 
