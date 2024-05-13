@@ -723,7 +723,7 @@ const questions = [
         //73
         question: "Найдите корни уравнения: \\(x^2 - x - 6 = 0\\), если дискриминант = 25",
         answers: [
-            {text: "(3; 0)", correct: true},
+            {text: "(3; 0)", correct: false},
             {text: "(-3; 2)", correct: false},
             {text: "(-2; 3)", correct: true},
             {text: "(2; -3)", correct: false},
