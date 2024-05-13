@@ -64,15 +64,15 @@ app.use(cors(corsOptions));
 
 
 
-function checkSession(req, res, next) {
-    if (!req.session.user) {
-        // If there is no session user, redirect to login page
-        res.redirect('/login');
-    } else {
-        // Proceed to next middleware or route handler
-        next();
-    }
-}
+// function checkSession(req, res, next) {
+//     if (!req.session.user) {
+//         // If there is no session user, redirect to login page
+//         res.redirect('/login');
+//     } else {
+//         // Proceed to next middleware or route handler
+//         next();
+//     }
+// }
 
 // Main page Russian       ##############################################################################
 
@@ -357,10 +357,10 @@ app.post("/levelOneKyrg", async (req, res) => {
         res.redirect("/error");
     }
 });
-app.get("/level01", checkSession, (req, res) => {
+app.get("/level01", (req, res) => {
     res.sendFile(__dirname + "/pages/level01.html");
 });
-app.get("/level01Kyrg", checkSession, (req, res) => {
+app.get("/level01Kyrg", (req, res) => {
     res.sendFile(__dirname + "/pages/level01Kyrg.html");
 });
 app.get("/error", (req, res) => {
