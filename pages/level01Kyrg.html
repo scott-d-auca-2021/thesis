@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>level01</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">Жеңил Математика</h1>
+
+        <nav class="navbar">
+            <form method="post" action="/openLevelsKyrg" style="text-align: left">
+                <button class="btn">Уровеньдерге кайтуу</button>
+            </form>
+        </nav>
+    </header>
+
+    <div class="all-level">
+        <div class="level01">
+            <button type="button" class="btn theory-btn" data-target="popup-1">Теория</button>
+            <h1>Уровень 1</h1>
+            <div class="game">
+                <h2 id="question"> question goes here</h2>
+                
+                <div id="answerButtons">
+                    <button class="gameBtn">Answer 1</button>
+                    <button class="gameBtn">Answer 2</button>
+                    <button class="gameBtn">Answer 3</button>
+                    <button class="gameBtn">Answer 4</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="world">
+            <img src="ground1.png" class="ground">
+            <img src="ground1.png" class="ground">
+            <img src="hero.png" class="hero">
+            <img src="zombie.png" class="zombie" style="left: 85%;">
+        </div>
+        <button id="nextBtn">Андан ары</button>
+    </div>
+
+    <div class="math-theory-popup" id="popup-1">
+        <div class="math-theory-content">
+            <span class="close-theory">&times;</span>
+            <h2>Квадрат теңдемелерде дискриминантты жана чечимдерди табуу</h2>
+            <!-- Your math theory content goes here -->
+            <div class="math-theory-scrollbox">
+                <br>
+                <p>Квадраттык теңдеме - бул \(ax^2 + bx + c = 0\) түрүндөгү теңдеме, мунда \(a\), \(b\) жана \(c\) - белгилүү сандар, ал эми \(a \neq 0\).</p>
+            <br>
+            <p><strong>Жөнөкөй сөздөр менен:</strong></p>
+            <p>\(x^2\) жанындагы санды \(a\) деп атайбыз</p>
+            <p>\(x\) жанындагы санды \(b\) деп атайбыз</p>
+            <p>\(x\)сиз турган санды \(c\) деп атайбыз</p>
+            <p>Эгерде \(x^2\) сансыз турса, анда \(a = 1\). Эгерде \(x\) сансыз турса, анда \(b = 1\)</p>
+            <br>
+            <p><strong>Дискриминант</strong> квадраттык теңдеменин тамырларынын санын жана мүнөзүн аныктоого жардам берет. Ал төмөнкү формула менен эсептелет:</p>
+            <p>\[D = b^2 - 4ac\]</p>
+            <br>
+            <p><strong>Ар кандай учурларды карап көрөлү:</strong></p>
+            <br>
+            <p><strong>1) Эгерде \(a\) терс болсо:</strong> \(-2x^2 + 3x + 1 = 0\)</p>
+            <br>
+            <p>Ушул учурда: \(a = -2;   b = 3;  c = 1\), демек \[D = 3^2 - 4 * (-2) * 1 = 9 + 8 = 17\]</p>
+            <br>
+            <p><strong>2) Эгерде \(b\) терс болсо:</strong> \(-2x^2 - 3x + 1 = 0\)</p>
+            <br>
+            <p>Ушул учурда: \(a = -2;   b = -3;  c = 1\), демек \[D = (-3)^2 - 4 * (-2) * 1 = 9 + 8 = 17\]</p>
+            <br>
+            <p>\(b\) чарчы дөңгөлөкчө алынгандыктан, ал кайра оңго айланат жана жооп өзгөрбөйт.</p>
+            <br>
+            <p><strong>3) Эгерде \(c\) терс болсо:</strong> \(x^2 - x - 1 = 0\)</p>
+            <br>
+            <p>Ушул учурда: \(a = 1;   b = -1;  c = -1\), демек \[D = (-1)^2 - 4 * 1 * (-1) = 1 + 4 = 5\]</p>
+            <br>
+            <p><strong>4) Эгерде \(c\) = 0 болсо:</strong> \(x^2 - 3x = 0\)</p>
+            <br>
+            <p>Ушул учурда: \(a = 1;   b = -3;  c = 0\), демек \[D = (-3)^2 - 4 * 1 * 0 = 9 - 0 = 9\]</p>
+            <br>
+            
+            <p>Дискриминанттын маанисине жараша:</p>
+            <ul>
+                <li>Эгерде \(D > 0\) болсо, теңдеме эки ар түрдүү чечимди алат.</li>
+                <li>Эгерде \(D = 0\) болсо, теңдеменин бир чечими болот.</li>
+                <li>Эгерде \(D < 0\) болсо, теңдеме чечимдери жок.</li>
+            </ul>
+            <br>
+            <p><strong>Квадраттык теңдеменин тамырларын/чечимдерин табуу:</strong></p>
+            <p>Тамырлар (чечимдер) квадраттык теңдемеден (эгерде \(D \geq 0\) болсо) төмөнкү формула менен табылат:</p>
+            <p>\[x_{1,2} = \frac{{-b \pm \sqrt{D}}}{{2a}},\]</p>
+            <p>\(\pm\) белгиси ар бир тамырды айрым алып чыгуу керектигин билдирет:</p>
+            <br>
+            <ul>
+                <li>\(x_1 = \frac{{-b + \sqrt{D}}}{{2a}}\)</li>
+                <li>\(x_2 = \frac{{-b - \sqrt{D}}}{{2a}}\)</li>
+            </ul>
+            <br>
+            <p><strong>Мисал 1:</strong></p>
+            <br>
+            <p>\[4x^2 - 4x + 1 = 0\]</p>
+            <p>\[a = 4;   b = -4;  c = 1\] \[D = (-4)^2 - 4 * 4 * 1 = 16 - 16 = 0\]</p>
+            <p>\(D = 0\), демек бизде 1 чечим бар:</p>
+            <br>
+            <p>\[x_{1,2} = \frac{{-(-4) \pm \sqrt{0}}}{{2*4}};\]</p>
+            <p>\[x_{1,2} = \frac{{4 \pm 0}}{{8}};\]</p>
+            <p>\[x_{1,2} = \frac{{4}}{{8}} = \frac{{1}}{{2}};\]</p>
+            <br>
+
+            <p><strong>Мисал 2:</strong></p>
+            <br>
+            <p>\[2x^2 - 7x + 3 = 0\]</p>
+            <p>\[a = 2;   b = -7;  c = 3\] \[D = (-7)^2 - 4 * 2 * 3 = 49 - 24 = 25\]</p>
+            <p>\(D > 0\), демек бизде 2 чечим бар:</p>
+            <br>
+            <p>\[x_1 = \frac{{-(-7) + \sqrt{25}}}{{2*2}};\]</p>
+            <p>\[x_1 = \frac{{7 + 5}}{{4}} = \frac{12}{4} = 3;\]</p>
+            <p>\[x_2 = \frac{{-(-7) - \sqrt{25}}}{{2*2}};\]</p>
+                <p>\[x_2 = \frac{{7 - 5}}{{4}} = \frac{2}{4} = \frac{1}{2};\]</p>
+                <br>
+            
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="questions1Kyrg.js"></script>
+    <script src="level01Kyrg.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const theoryButtons = document.querySelectorAll('.theory-btn');
+        theoryButtons.forEach(btn => {
+            btn.onclick = function() {
+                const targetId = btn.getAttribute('data-target');
+                const popup = document.getElementById(targetId);
+                popup.style.display = 'block';
+            }
+        });
+
+        const closeButtons = document.querySelectorAll('.close-theory');
+        closeButtons.forEach(btn => {
+            btn.onclick = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            }
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('math-theory-popup')) {
+                event.target.style.display = 'none';
+            }
+        }
+    });
+    </script>
+
+</body>
+
+</html>

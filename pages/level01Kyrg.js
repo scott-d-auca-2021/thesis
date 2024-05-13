@@ -24,7 +24,7 @@ let numOfQuestions;
 
 function resetState() {
     nextButton.style.display = "none";
-    nextButton.innerHTML= "Дальше";
+    nextButton.innerHTML= "Андан ары";
     if (zombiePosition <9){
         // zombiePosition = initialZombiePosition; // Reset the zombie's position.
         // document.querySelector('.zombie').style.left = `${zombiePosition}%`; // Reset the zombie's style.
@@ -65,7 +65,7 @@ function startQuiz() {
     numOfQuestions = 0;
     zombiePosition = initialZombiePosition; // Reset the zombie's position.
     document.querySelector('.zombie').style.left = `${zombiePosition}%`; // Reset the zombie's style.
-    nextButton.innerHTML = "Дальше";
+    nextButton.innerHTML = "Андан ары";
     showQuestion();
 }
 
@@ -97,23 +97,8 @@ function selectAnswer(e){
 
 function showScore(){
     resetState();
-
-    const lastDigit = score % 10;
-    const beforeLastDigit = Math.floor((score / 10) % 10); // To handle cases like 11-14 correctly
-
-    let questionSuffix;
-
-    // Determine the correct suffix based on the last digit of the score
-    if (lastDigit === 1 && beforeLastDigit !== 1) {
-        questionSuffix = "вопрос";
-    } else if (lastDigit >= 2 && lastDigit <= 4 && beforeLastDigit !== 1) {
-        questionSuffix = "вопроса";
-    } else {
-        questionSuffix = "вопросов";
-    }
-
-    questionElement.innerHTML = `Вы ответили на ${score} ${questionSuffix} из ${numOfQuestions}`;
-    nextButton.innerHTML= "Играть заново";
+    questionElement.innerHTML = `Сиз ${numOfQuestions} суроодон ${score} суроого жооп бердиңиз`;
+    nextButton.innerHTML= "Кайра ойноо";
     //nextButton.style.display = "block";
 }
 

@@ -6,30 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <title>indexLoginError</title>
+    <title>loginErrorKyrg</title>
 </head>
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo">Легкая Математика</a>
+        <h1 class="logo">Жеңил Математика</h1>
 
         <nav class="navbar">
-            <form method="post" action="/openKyrg" style="text-align: left">
-                <button class="btn">Перейти на кыргызскую версию</button>
+            <form method="post" action="/openLogin" style="text-align: left">
+                <button class="btn">Орус тилине өтүү</button>
             </form>
         </nav>
     </header>
 
     <div class="welcome-container">
-        <h2 class="welcome-title">Добро пожаловать!</h2>
-        <p class="welcome-message">Изучайте математику легко и с удовольствием. Подключитесь к нашему сообществу прямо сейчас.</p>
+        <h2 class="welcome-title">Кош келиңиз!</h2>
+        <p class="welcome-message">Математиканы оңой жана ырахат менен үйрөнөлү. Кошулгула!</p>
     </div>
 
     <div class="container">      
         <div class="box form-box">
-            <div class="notification">Неправильная почта или пароль</div> <!-- Notification message -->
-            <div class="login-title">Вход</div>
-            <form method="post" action="/loginAction" style="text-align: left">                
+            <div class="notification">Туура эмес почта же пароль</div> <!-- Notification message -->
+            <div class="login-title">Кирүү</div>
+            <form method="post" action="/loginActionKyrg" style="text-align: left">                
                 <div class="field input">
                     <label for="email">Email</label>
                     <input type="text" id="email" name="email" autocomplete="off" required>
@@ -39,10 +39,10 @@
                     <input type="password" id="password" name="password" autocomplete="off" required>
                 </div>
 
-                <button type="submit" class="btn">Войти</button>
+                <button type="submit" class="btn">Кирүү</button>
 
                 <div class="links">
-                    Еще нет Аккаунта? <a href="indexReg.html"> Регистрация </a>
+                    Аккаунтуңуз жокпу? <a href="regKyrg.html"> Регистрация </a>
                 </div>
 
             </form>

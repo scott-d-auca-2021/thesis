@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <title>registration</title>
+    <title>level01</title>
 </head>
 
 <body>
@@ -24,6 +24,7 @@
 
     <div class="all-level">
         <div class="level01">
+            <button type="button" class="btn theory-btn" data-target="popup-1">Теория</button>
             <h1>Уровень 1</h1>
             <div class="game">
                 <h2 id="question"> question goes here</h2>
@@ -45,13 +46,118 @@
         </div>
         <button id="nextBtn">Дальше</button>
     </div>
-    
-    <!-- <form method="post" action="/levels" style="text-align: left">
-        <button id="endBtn" class="endBtn">Закончить</button>
-    </form> -->
+
+    <div class="math-theory-popup" id="popup-1">
+        <div class="math-theory-content">
+            <span class="close-theory">&times;</span>
+            <h2>Нахождение дискриминанта и корней в квадратных уравнениях</h2>
+            <!-- Your math theory content goes here -->
+            <div class="math-theory-scrollbox">
+                <br>
+                <p>Квадратное уравнение — это уравнение вида <strong>\(ax^2 + bx + c = 0\)</strong>, где \(a\), \(b\) и \(c\) — известные числа, причем \(a \neq 0\).</p>
+                <br>
+                <p><strong>Простыми словами:</strong></p>
+                <p>Число, которое стоит возле \(x^2\) будем называть <strong>\(a\)</strong></p>
+                <p>Число, которое стоит возле \(x\) будем называть <strong>\(b\)</strong></p>
+                <p>Число, которое стоит отдельно без \(x\) будем называть <strong>\(с\)</strong></p>
+                <p>Если \(x^2\) стоит без числа, значит \(a = 1\). Если \(x\) стоит без числа, значит \(b = 1\)</p>
+                <br>
+                <p><strong>Дискриминант</strong> квадратного уравнения помогает определить количество и характер корней уравнения. Он вычисляется по формуле:</p>
+                <p>\[D = b^2 - 4ac\]</p>
+                <br>
+                <p><strong>Рассмотрим разные случаи:</strong></p>
+                <br>
+                <p><strong>1) Когда \(a\) отрицательный:</strong> \(-2x^2 + 3x + 1 = 0\)</p>
+                <br>
+                <p>В данном случае: \(a = -2;   b = 3;  c = 1\), следовательно \[D = 3^2 - 4 * (-2) * 1 = 9 + 8 = 17\]</p>
+                <br>
+                <p><strong>2) Когда \(b\) отрицательный:</strong> \(-2x^2 - 3x + 1 = 0\)</p>
+                <br>
+                <p>В данном случае: \(a = -2;   b = -3;  c = 1\), следовательно \[D = (-3)^2 - 4 * (-2) * 1 = 9 + 8 = 17\]</p>
+                <br>
+                <p>Из-за того, что \(b\) берется в квадратную степень, он обратно становится положительным и ответ не меняется.</p>
+                <br>
+                <p><strong>3) Когда \(c\) отрицательный:</strong> \(x^2 - x - 1 = 0\)</p>
+                <br>
+                <p>В данном случае: \(a = 1;   b = -1;  c = -1\), следовательно \[D = (-1)^2 - 4 * 1 * (-1) = 1 + 4 = 5\]</p>
+                <br>
+                <p><strong>4) Когда \(c\) = 0:</strong> \(x^2 - 3x = 0\)</p>
+                <br>
+                <p>В данном случае: \(a = 1;   b = -3;  c = 0\), следовательно \[D = (-3)^2 - 4 * 1 * 0 = 9 - 0 = 9\]</p>
+                <br>
+        
+                <p>В зависимости от значения дискриминанта:</p>
+                <ul>
+                    <li>Если \(D > 0\), уравнение имеет два различных решения.</li>
+                    <li>Если \(D = 0\), уравнение имеет одно решение.</li>
+                    <li>Если \(D < 0\), уравнение не имеет решений.</li>
+                </ul>
+                <br>
+                <p><strong>Нахождение корней/решений квадратного уравнения:</strong></p>
+                <p>Корни (решения) квадратного уравнения (если \(D \geq 0\)) можно найти с помощью даннной формулы:</p>
+                <p>\[x_{1,2} = \frac{{-b \pm \sqrt{D}}}{{2a}},\]</p>
+                <p>где знак \(\pm\) означает, что каждый корень нужно вычислить отдельно:</p>
+                <br>
+                <ul>
+                    <li>\(x_1 = \frac{{-b + \sqrt{D}}}{{2a}}\)</li>
+                    <li>\(x_2 = \frac{{-b - \sqrt{D}}}{{2a}}\)</li>
+                </ul>
+                <br>
+                <p><strong>Пример 1:</strong></p>
+                <br>
+                <p>\[4x^2 - 4x + 1 = 0\]</p>
+                <p>\[a = 4;   b = -4;  c = 1\] \[D = (-4)^2 - 4 * 4 * 1 = 16 - 16 = 0\]</p>
+                <p>\(D = 0\), значит у нас будет 1 решение:</p>
+                <br>
+                <p>\[x_{1,2} = \frac{{-(-4) \pm \sqrt{0}}}{{2*4}};\]</p>
+                <p>\[x_{1,2} = \frac{{4 \pm 0}}{{8}};\]</p>
+                <p>\[x_{1,2} = \frac{{4}}{{8}} = \frac{{1}}{{2}};\]</p>
+                <br>
+
+                <p><strong>Пример 2:</strong></p>
+                <br>
+                <p>\[2x^2 - 7x + 3 = 0\]</p>
+                <p>\[a = 2;   b = -7;  c = 3\] \[D = (-7)^2 - 4 * 2 * 3 = 49 - 24 = 25\]</p>
+                <p>\(D > 0\), значит у нас будет 2 решения</p>
+                <br>
+                <p>\[x_1 = \frac{{-(-7) + \sqrt{25}}}{{2*2}};\]</p>
+                <p>\[x_1 = \frac{{7 + 5}}{{4}} = \frac{12}{4} = 3;\]</p>
+                <p>\[x_2 = \frac{{-(-7) - \sqrt{25}}}{{2*2}};\]</p>
+                <p>\[x_2 = \frac{{7 - 5}}{{4}} = \frac{2}{4} = \frac{1}{2};\]</p>
+                <br>
+            
+            </div>
+        </div>
+    </div>
+
     
     <script src="questions1.js"></script>
     <script src="level01.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const theoryButtons = document.querySelectorAll('.theory-btn');
+        theoryButtons.forEach(btn => {
+            btn.onclick = function() {
+                const targetId = btn.getAttribute('data-target');
+                const popup = document.getElementById(targetId);
+                popup.style.display = 'block';
+            }
+        });
+
+        const closeButtons = document.querySelectorAll('.close-theory');
+        closeButtons.forEach(btn => {
+            btn.onclick = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            }
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('math-theory-popup')) {
+                event.target.style.display = 'none';
+            }
+        }
+    });
+    </script>
 
 </body>
 

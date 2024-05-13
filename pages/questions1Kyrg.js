@@ -1,7 +1,7 @@
 const questions = [
     {
         //1
-        question: "Найдите дискриминант уравнения: \\(x^2 + 3x - 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 3x - 1 = 0\\)",
         answers: [
             {text: "5", correct: false},
             {text: "13", correct: true},
@@ -11,7 +11,7 @@ const questions = [
     },
     {
         //2
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 3x - 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 3x - 1 = 0\\)",
         answers: [
             {text: "20", correct: false},
             {text: "15", correct: false},
@@ -21,7 +21,7 @@ const questions = [
     },
     {
         //3
-        question: "Найдите дискриминант уравнения: \\(x^2 + 5x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 5x + 2 = 0\\)",
         answers: [
             {text: "15", correct: false},
             {text: "17", correct: true},
@@ -31,7 +31,7 @@ const questions = [
     },
     {
         //4
-        question: "Найдите дискриминант уравнения: \\(x^2 - 4x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 4x + 2 = 0\\)",
         answers: [
             {text: "7", correct: false},
             {text: "9", correct: false},
@@ -41,7 +41,7 @@ const questions = [
     },
     {
         //5
-        question: "Найдите дискриминант уравнения: \\(4x^2 - x - 5 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 - x - 5 = 0\\)",
         answers: [
             {text: "49", correct: false},
             {text: "25", correct: false},
@@ -51,7 +51,7 @@ const questions = [
     },
     {
         //6
-        question: "Найдите дискриминант уравнения: \\(x^2 - 5x + 4 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 5x + 4 = 0\\)",
         answers: [
             {text: "2", correct: false},
             {text: "13", correct: false},
@@ -61,7 +61,7 @@ const questions = [
     },
     {
         //7
-        question: "Найдите дискриминант уравнения: \\(x^2 - 3x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 3x + 2 = 0\\)",
         answers: [
             {text: "1", correct: true},
             {text: "-5", correct: false},
@@ -71,7 +71,7 @@ const questions = [
     },
     {
         //8
-        question: "Найдите дискриминант уравнения: \\(x^2 - 5x + 6 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 5x + 6 = 0\\)",
         answers: [
             {text: "1", correct: true},
             {text: "-5", correct: false},
@@ -81,7 +81,7 @@ const questions = [
     },
     {
         //9
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 7x + 3 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 7x + 3 = 0\\)",
         answers: [
             {text: "19", correct: false},
             {text: "21", correct: false},
@@ -91,7 +91,7 @@ const questions = [
     },
     {
         //10
-        question: "Найдите дискриминант уравнения: \\(3x^2 + 2x - 5 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 + 2x - 5 = 0\\)",
         answers: [
             {text: "9", correct: false},
             {text: "64", correct: true},
@@ -101,7 +101,7 @@ const questions = [
     },
     {
         //11
-        question: "Найдите дискриминант уравнения: \\(4x^2 - 4x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 - 4x + 1 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "2", correct: false},
@@ -111,7 +111,7 @@ const questions = [
     },
     {
         //12
-        question: "Найдите дискриминант уравнения: \\(x^2 - 2x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 2x + 1 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "2", correct: false},
@@ -121,7 +121,7 @@ const questions = [
     },
     {
         //13
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 5x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 5x + 2 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "2", correct: false},
@@ -131,7 +131,7 @@ const questions = [
     },
     {
         //14
-        question: "Найдите дискриминант уравнения: \\(3x^2 + 4x - 5 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 + 4x - 5 = 0\\)",
         answers: [
             {text: "16", correct: false},
             {text: "-76", correct: false},
@@ -141,7 +141,7 @@ const questions = [
     },
     {
         //15
-        question: "Найдите дискриминант уравнения: \\(4x^2 - 7x + 3 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 - 7x + 3 = 0\\)",
         answers: [
             {text: "10", correct: false},
             {text: "1", correct: true},
@@ -151,7 +151,7 @@ const questions = [
     },
     {
         //16
-        question: "Найдите дискриминант уравнения: \\(x^2 + 6x + 9 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 6x + 9 = 0\\)",
         answers: [
             {text: "4", correct: false},
             {text: "0", correct: true},
@@ -161,7 +161,7 @@ const questions = [
     },
     {
         //17
-        question: "Найдите дискриминант уравнения: \\(2x^2 + x - 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 + x - 1 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "10", correct: false},
@@ -171,7 +171,7 @@ const questions = [
     },
     {
         //18
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 2x - 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 2x - 1 = 0\\)",
         answers: [
             {text: "3", correct: false},
             {text: "6", correct: false},
@@ -181,7 +181,7 @@ const questions = [
     },
     {
         //19
-        question: "Найдите дискриминант уравнения: \\(4x^2 + 7x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 + 7x + 2 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "17", correct: true},
@@ -191,7 +191,7 @@ const questions = [
     },
     {
         //20
-        question: "Найдите дискриминант уравнения: \\(x^2 - 4x + 4 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 4x + 4 = 0\\)",
         answers: [
             {text: "-32", correct: false},
             {text: "32", correct: false},
@@ -201,7 +201,7 @@ const questions = [
     },
     {
         //21
-        question: "Найдите дискриминант уравнения: \\(2x^2 + 3x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 + 3x + 1 = 0\\)",
         answers: [
             {text: "4", correct: false},
             {text: "2", correct: false},
@@ -211,7 +211,7 @@ const questions = [
     },
     {
         //22
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 5x - 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 5x - 2 = 0\\)",
         answers: [
             {text: "49", correct: true},
             {text: "1", correct: false},
@@ -221,7 +221,7 @@ const questions = [
     },
     {
         //23
-        question: "Найдите дискриминант уравнения: \\(4x^2 - 6x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 - 6x + 2 = 0\\)",
         answers: [
             {text: "15", correct: false},
             {text: "2", correct: false},
@@ -231,7 +231,7 @@ const questions = [
     },
     {
         //24
-        question: "Найдите дискриминант уравнения: \\(x^2 - 5x + 6 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 5x + 6 = 0\\)",
         answers: [
             {text: "5", correct: false},
             {text: "6", correct: false},
@@ -241,7 +241,7 @@ const questions = [
     },
     {
         //25
-        question: "Найдите дискриминант уравнения: \\(x^2 - 6x + 9 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 6x + 9 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "36", correct: false},
@@ -251,7 +251,7 @@ const questions = [
     },
     {
         //26
-        question: "Найдите дискриминант уравнения: \\(3x^2 + 3x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 + 3x + 1 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "-3", correct: true},
@@ -261,7 +261,7 @@ const questions = [
     },
     {
         //27
-        question: "Найдите дискриминант уравнения: \\(5x^2 - 10x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(5x^2 - 10x + 2 = 0\\)",
         answers: [
             {text: "60", correct: false},
             {text: "80", correct: true},
@@ -271,7 +271,7 @@ const questions = [
     },
     {
         //28
-        question: "Найдите дискриминант уравнения: \\(x^2 + x - 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + x - 1 = 0\\)",
         answers: [
             {text: "5", correct: true},
             {text: "1", correct: false},
@@ -281,7 +281,7 @@ const questions = [
     },
     {
         //29
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 6x + 3 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 6x + 3 = 0\\)",
         answers: [
             {text: "12", correct: false},
             {text: "0", correct: true},
@@ -291,7 +291,7 @@ const questions = [
     },
     {
         //30
-        question: "Найдите дискриминант уравнения: \\(x^2 - 8x + 15 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 8x + 15 = 0\\)",
         answers: [
             {text: "16", correct: false},
             {text: "64", correct: true},
@@ -301,7 +301,7 @@ const questions = [
     },
     {
         //31
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 12x + 10 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 12x + 10 = 0\\)",
         answers: [
             {text: "24", correct: false},
             {text: "24", correct: true},
@@ -311,7 +311,7 @@ const questions = [
     },
     {
         //32
-        question: "Найдите дискриминант уравнения: \\(4x^2 + 8x + 3 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 + 8x + 3 = 0\\)",
         answers: [
             {text: "16", correct: false},
             {text: "-8", correct: false},
@@ -321,7 +321,7 @@ const questions = [
     },
     {
         //33
-        question: "Найдите дискриминант уравнения: \\(x^2 - 10x + 25 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 10x + 25 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "10", correct: false},
@@ -331,7 +331,7 @@ const questions = [
     },
     {
         //34
-        question: "Найдите дискриминант уравнения: \\(x^2 - 2x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 2x + 1 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "1", correct: false},
@@ -341,7 +341,7 @@ const questions = [
     },
     {
         //35
-        question: "Найдите дискриминант уравнения: \\(x^2 + 6x + 9 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 6x + 9 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "3", correct: false},
@@ -351,7 +351,7 @@ const questions = [
     },
     {
         //36
-        question: "Найдите дискриминант уравнения: \\(x^2 - 3x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 3x + 2 = 0\\)",
         answers: [
             {text: "1", correct: true},
             {text: "4", correct: false},
@@ -361,7 +361,7 @@ const questions = [
     },
     {
         //37
-        question: "Найдите дискриминант уравнения: \\(x^2 - 4x + 4 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 4x + 4 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "16", correct: false},
@@ -371,7 +371,7 @@ const questions = [
     },
     {
         //38
-        question: "Найдите дискриминант уравнения: \\(x^2 + 2x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 2x + 1 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "1", correct: false},
@@ -381,7 +381,7 @@ const questions = [
     },
     {
         //39
-        question: "Найдите дискриминант уравнения: \\(x^2 - x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - x + 1 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "3", correct: false},
@@ -391,7 +391,7 @@ const questions = [
     },
     {
         //40
-        question: "Найдите дискриминант уравнения: \\(x^2 + 4x + 4 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 4x + 4 = 0\\)",
         answers: [
             {text: "4", correct: false},
             {text: "0", correct: true},
@@ -401,7 +401,7 @@ const questions = [
     },
     {
         //41
-        question: "Найдите дискриминант уравнения: \\(x^2 - 7x + 10 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 7x + 10 = 0\\)",
         answers: [
             {text: "49", correct: false},
             {text: "0", correct: false},
@@ -411,7 +411,7 @@ const questions = [
     },
     {
         //42
-        question: "Найдите дискриминант уравнения: \\(x^2 - 2x + 5 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 2x + 5 = 0\\)",
         answers: [
             {text: "16", correct: false},
             {text: "5", correct: false},
@@ -421,7 +421,7 @@ const questions = [
     },
     {
         //43
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 2x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 2x + 1 = 0\\)",
         answers: [
             {text: "-1", correct: false},
             {text: "4", correct: false},
@@ -431,7 +431,7 @@ const questions = [
     },
     {
         //44
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 6x + 3 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 6x + 3 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "6", correct: false},
@@ -441,7 +441,7 @@ const questions = [
     },
     {
         //45
-        question: "Найдите дискриминант уравнения: \\(x^2 - 9x + 20 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 9x + 20 = 0\\)",
         answers: [
             {text: "0", correct: false},
             {text: "20", correct: false},
@@ -451,7 +451,7 @@ const questions = [
     },
     {
         //46
-        question: "Найдите дискриминант уравнения: \\(x^2 - 4x + 5 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 4x + 5 = 0\\)",
         answers: [
             {text: "4", correct: false},
             {text: "-4", correct: true},
@@ -461,7 +461,7 @@ const questions = [
     },
     {
         //47
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 8x + 8 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 8x + 8 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "64", correct: false},
@@ -471,7 +471,7 @@ const questions = [
     },
     {
         //48
-        question: "Найдите дискриминант уравнения: \\(x^2 - 5x + 6 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 5x + 6 = 0\\)",
         answers: [
             {text: "5", correct: false},
             {text: "6", correct: false},
@@ -481,7 +481,7 @@ const questions = [
     },
     {
         //49
-        question: "Найдите дискриминант уравнения: \\(x^2 - 10x + 25 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 10x + 25 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "50", correct: false},
@@ -491,7 +491,7 @@ const questions = [
     },
     {
         //50
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 3x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 3x + 1 = 0\\)",
         answers: [
             {text: "1", correct: false},
             {text: "9", correct: false},
@@ -501,7 +501,7 @@ const questions = [
     },
     {
         //51
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 4x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 4x + 2 = 0\\)",
         answers: [
             {text: "0", correct: true},
             {text: "4", correct: false},
@@ -511,7 +511,7 @@ const questions = [
     },
     {
         //52
-        question: "Найдите дискриминант уравнения: \\(x^2 + 2x + 1 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 2x + 1 = 0\\)",
         answers: [
             {text: "8", correct: false},
             {text: "0", correct: true},
@@ -521,7 +521,7 @@ const questions = [
     },
     {
         //53
-        question: "Найдите дискриминант уравнения: \\(x^2 - 6x + 8 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 6x + 8 = 0\\)",
         answers: [
             {text: "4", correct: false},
             {text: "8", correct: false},
@@ -531,7 +531,7 @@ const questions = [
     },
     {
         //54
-        question: "Найдите дискриминант уравнения: \\(x^2 + x - 12 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + x - 12 = 0\\)",
         answers: [
             {text: "49", correct: true},
             {text: "12", correct: false},
@@ -541,7 +541,7 @@ const questions = [
     },
     {
         //55
-        question: "Найдите дискриминант уравнения: \\(2x^2 - 5x + 2 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 - 5x + 2 = 0\\)",
         answers: [
             {text: "1", correct: true},
             {text: "4", correct: false},
@@ -551,7 +551,7 @@ const questions = [
     },
     {
         //56
-        question: "Найдите дискриминант уравнения: \\(4x^2 - 12x + 9 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 - 12x + 9 = 0\\)",
         answers: [
             {text: "36", correct: false},
             {text: "0", correct: true},
@@ -561,7 +561,7 @@ const questions = [
     },
     {
         //57
-        question: "Найдите дискриминант уравнения: \\(x^2 - 8x + 15 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 8x + 15 = 0\\)",
         answers: [
             {text: "16", correct: true},
             {text: "0", correct: false},
@@ -571,7 +571,7 @@ const questions = [
     },
     {
         //58
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 9x + 6 = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 9x + 6 = 0\\)",
         answers: [
             {text: "9", correct: false},
             {text: "3", correct: false},
@@ -581,7 +581,7 @@ const questions = [
     },
     {
         //59
-        question: "Найдите дискриминант уравнения: \\(x^2 - 5x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 5x = 0\\)",
         answers: [
             {text: "25", correct: true},
             {text: "0", correct: false},
@@ -591,7 +591,7 @@ const questions = [
     },
     {
         //60
-        question: "Найдите дискриминант уравнения: \\(2x^2 + 6x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 + 6x = 0\\)",
         answers: [
             {text: "36", correct: true},
             {text: "6", correct: false},
@@ -601,7 +601,7 @@ const questions = [
     },
     {
         //61
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 9x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 9x = 0\\)",
         answers: [
             {text: "81", correct: true},
             {text: "9", correct: false},
@@ -611,7 +611,7 @@ const questions = [
     },
     {
         //62
-        question: "Найдите дискриминант уравнения: \\(x^2 + 4x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 + 4x = 0\\)",
         answers: [
             {text: "16", correct: true},
             {text: "4", correct: false},
@@ -621,7 +621,7 @@ const questions = [
     },
     {
         //63
-        question: "Найдите дискриминант уравнения: \\(5x^2 - 10x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(5x^2 - 10x = 0\\)",
         answers: [
             {text: "100", correct: true},
             {text: "10", correct: false},
@@ -631,7 +631,7 @@ const questions = [
     },
     {
         //64
-        question: "Найдите дискриминант уравнения: \\(4x^2 + 8x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(4x^2 + 8x = 0\\)",
         answers: [
             {text: "64", correct: true},
             {text: "8", correct: false},
@@ -641,7 +641,7 @@ const questions = [
     },
     {
         //65
-        question: "Найдите дискриминант уравнения: \\(6x^2 - 12x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(6x^2 - 12x = 0\\)",
         answers: [
             {text: "144", correct: true},
             {text: "12", correct: false},
@@ -651,7 +651,7 @@ const questions = [
     },
     {
         //66
-        question: "Найдите дискриминант уравнения: \\(x^2 - 7x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(x^2 - 7x = 0\\)",
         answers: [
             {text: "49", correct: true},
             {text: "7", correct: false},
@@ -661,7 +661,7 @@ const questions = [
     },
     {
         //67
-        question: "Найдите дискриминант уравнения: \\(2x^2 + 4x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(2x^2 + 4x = 0\\)",
         answers: [
             {text: "16", correct: true},
             {text: "4", correct: false},
@@ -671,7 +671,7 @@ const questions = [
     },
     {
         //68
-        question: "Найдите дискриминант уравнения: \\(3x^2 - 3x = 0\\)",
+        question: "Теңдеменин дискриминантын тапкыла: \\(3x^2 - 3x = 0\\)",
         answers: [
             {text: "9", correct: true},
             {text: "3", correct: false},
@@ -681,7 +681,7 @@ const questions = [
     },
     {
         //69
-        question: "Найдите корни уравнения: \\(x^2 - 4x - 5 = 0\\), если дискриминант = 36",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 - 4x - 5 = 0\\),  дискриминант = 36",
         answers: [
             {text: "(5; -1)", correct: true},
             {text: "(1; -5)", correct: false},
@@ -691,7 +691,7 @@ const questions = [
     },
     {
         //70
-        question: "Найдите корни уравнения: \\(x^2 + 6x + 5 = 0\\), если дискриминант = 16",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 + 6x + 5 = 0\\), дискриминант = 16",
         answers: [
             {text: "(-1; -5)", correct: true},
             {text: "(1; -5)", correct: false},
@@ -701,7 +701,7 @@ const questions = [
     },
     {
         //71
-        question: "Найдите корни уравнения: \\(x^2 + 3x - 10 = 0\\), если дискриминант = 49",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 + 3x - 10 = 0\\), дискриминант = 49",
         answers: [
             {text: "(2; -5)", correct: false},
             {text: "(5; -2)", correct: true},
@@ -711,7 +711,7 @@ const questions = [
     },
     {
         //72
-        question: "Найдите корни уравнения: \\(x^2 - 5x + 6 = 0\\), если дискриминант = 1",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 - 5x + 6 = 0\\), дискриминант = 1",
         answers: [
             {text: "(3; 2)", correct: true},
             {text: "(2; 3)", correct: false},
@@ -721,7 +721,7 @@ const questions = [
     },
     {
         //73
-        question: "Найдите корни уравнения: \\(x^2 - x - 6 = 0\\), если дискриминант = 25",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 - x - 6 = 0\\), дискриминант = 25",
         answers: [
             {text: "(3; -2)", correct: true},
             {text: "(-3; 2)", correct: false},
@@ -731,7 +731,7 @@ const questions = [
     },
     {
         //74
-        question: "Найдите корни уравнения: \\(x^2 - 6x + 8 = 0\\), если дискриминант = 4",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 - 6x + 8 = 0\\), дискриминант = 4",
         answers: [
             {text: "(4; 2)", correct: true},
             {text: "(2; 4)", correct: false},
@@ -741,7 +741,7 @@ const questions = [
     },
     {
         //75
-        question: "Найдите корни уравнения: \\(x^2 + 4x - 12 = 0\\), если дискриминант = 64",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 + 4x - 12 = 0\\), дискриминант = 64",
         answers: [
             {text: "(2; -6)", correct: false},
             {text: "(-6; 2)", correct: false},
@@ -751,7 +751,7 @@ const questions = [
     },
     {
         //76
-        question: "Найдите корни уравнения: \\(x^2 + 5x - 14 = 0\\), если дискриминант = 81",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 + 5x - 14 = 0\\), дискриминант = 81",
         answers: [
             {text: "(2; -7)", correct: true},
             {text: "(-2; 7)", correct: false},
@@ -761,7 +761,7 @@ const questions = [
     },
     {
         //77
-        question: "Найдите корни уравнения: \\(x^2 - 3x - 4 = 0\\), если дискриминант = 25",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 - 3x - 4 = 0\\), дискриминант = 25",
         answers: [
             {text: "(-1; 4)", correct: false},
             {text: "(4; -1)", correct: true},
@@ -771,7 +771,7 @@ const questions = [
     },
     {
         //78
-        question: "Найдите корни уравнения: \\(x^2 - 8x + 12 = 0\\), если дискриминант = 16",
+        question: "Теңдеменин чечимин тапкыла: \\(x^2 - 8x + 12 = 0\\), дискриминант = 16",
         answers: [
             {text: "(6; 2)", correct: false},
             {text: "(2; 6)", correct: true},

@@ -11,14 +11,19 @@
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo">Легкая Математика</a>
+        <h1 class="logo">Легкая Математика</h1>
 
         <nav class="navbar">
-            <form method="post" action="/openKyrg" style="text-align: left">
-                <button class="btn">Перейти на кыргызскую версию</button>
+            <form method="post" action="/openRegKyrg" style="text-align: left">
+                <button class="btn">Кыргызская версия</button>
             </form>
         </nav>
     </header>
+
+    <div class="welcome-container">
+        <h2 class="welcome-title">Добро пожаловать!</h2>
+        <p class="welcome-message">Изучайте математику легко и с удовольствием. Подключитесь прямо сейчас!</p>
+    </div>
 
     <div class="container">
         <div class="box form-box">
@@ -30,7 +35,7 @@
                 </div>
                 <div class="field input">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" autocomplete="off" required>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
                 </div>
                 <div class="field input">
                     <label for="password">Пароль</label>
