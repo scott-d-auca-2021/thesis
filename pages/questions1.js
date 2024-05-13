@@ -323,7 +323,7 @@ const questions = [
         //33
         question: "Найдите дискриминант уравнения: \\(x^2 - 10x + 25 = 0\\)",
         answers: [
-            {text: "25", correct: true},
+            {text: "25", correct: false},
             {text: "10", correct: false},
             {text: "0", correct: true},
             {text: "-25", correct: false},
